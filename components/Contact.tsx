@@ -11,12 +11,15 @@ export default function Contact() {
           Kontakt
         </p>
 
-        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold uppercase tracking-tight text-[var(--foreground)] leading-tight mb-4">
+        <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-3">
           Přestaň čekat.
         </h2>
-        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold italic text-[var(--gold)] leading-tight mb-10">
+        <p
+          className="text-4xl md:text-5xl lg:text-6xl leading-tight mb-10"
+          style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}
+        >
           Napiš mi.
-        </h2>
+        </p>
 
         <p className="text-[var(--muted)] font-light leading-relaxed text-lg max-w-xl mx-auto mb-6">
           Jedna zpráva. Žádný závazek.
@@ -33,7 +36,8 @@ export default function Contact() {
           href={WA}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-12 py-5 bg-[var(--gold)] text-white text-xs tracking-[0.35em] uppercase font-medium hover:bg-[var(--gold-dark)] transition-colors duration-300 mb-16"
+          className="inline-block px-12 py-5 text-white text-xs tracking-[0.35em] uppercase font-bold hover:opacity-90 transition-opacity duration-300 mb-16"
+          style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
         >
           Napsat Jarce na WhatsApp →
         </a>

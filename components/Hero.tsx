@@ -1,5 +1,7 @@
 import BrushStroke from "./BrushStroke";
 
+const WA = "https://wa.me/420774420251?text=Ahoj+Jarko%2C+ráda+bych+si+s+tebou+popovídala.";
+
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center bg-white pt-16">
@@ -51,7 +53,9 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="#kontakt"
+              href={WA}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block px-10 py-4 text-white text-xs tracking-[0.3em] uppercase font-bold hover:opacity-90 transition-opacity duration-300"
               style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
             >
