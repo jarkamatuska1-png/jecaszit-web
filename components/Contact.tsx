@@ -45,8 +45,8 @@ export default function Contact() {
         <div className="grid md:grid-cols-3 gap-8 border-t border-[var(--gold-light)] pt-12">
           <div>
             <p className="text-xs tracking-[0.4em] uppercase text-[var(--gold)] font-medium mb-3">Email</p>
-            <a href="mailto:matuskova@freli.cz" className="text-[var(--muted)] hover:text-[var(--gold)] transition-colors font-light">
-              matuskova@freli.cz
+            <a href="mailto:jarka@jecaszit.cz" className="text-[var(--muted)] hover:text-[var(--gold)] transition-colors font-light">
+              jarka@jecaszit.cz
             </a>
           </div>
           <div>
