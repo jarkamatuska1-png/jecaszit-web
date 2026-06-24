@@ -9,18 +9,6 @@ const offers = [
     duration: "30 minut / Zoom",
     desc: "Pro chvíli, kdy cítíš, že nechceš další roky stát jen na tom, co ti kdo dovolí, nabídne nebo zaplatí.\n\nMožná už nechceš být závislá jen na jedné výplatě, jedné roli nebo jednom systému.\n\nChceš si začít budovat vlastní prostor, větší stabilitu a zázemí, které stojí víc na tvém rozhodnutí.\n\nBez tlaku. Bez přetvářky. Bez hraní si na někoho, kým nejsi.\n\nZ hovoru odejdeš s jasnější představou, jak můžeš jít dál — a kde začít tvořit něco svého.",
   },
-  {
-    number: "02",
-    title: "Koučink JIH®",
-    duration: "60 minut / Zoom",
-    desc: "Kompletní nastavení všech oblastí života online. Jedno sezení udělá víc než rok přemýšlení.",
-  },
-  {
-    number: "03",
-    title: "6týdenní mentoring",
-    duration: "6 týdnů",
-    desc: "Pro tebe, pokud chceš změnu opravdovou. Každý týden jedno setkání. Trvalá změna.",
-  },
 ];
 
 export default function Services() {
@@ -49,11 +37,11 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-0">
+        <div className="max-w-2xl">
           {offers.map((o, i) => (
             <div
               key={o.number}
-              className={`p-10 border border-[var(--gold-light)] ${i > 0 ? "md:-ml-px" : ""} hover:border-[var(--gold)] hover:z-10 relative transition-colors duration-300 group`}
+              className="p-10 border border-[var(--gold-light)] hover:border-[var(--gold)] transition-colors duration-300 group"
             >
               <div className="mb-6">
                 <BrushStroke className="font-sans text-sm font-bold">
