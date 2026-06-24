@@ -5,7 +5,7 @@ const WA = "https://wa.me/420774420251?text=Ahoj+Jarko%2C+ráda+bych+si+s+tebou+
 export default function Services() {
   return (
     <section id="spoluprace" className="py-28 bg-white border-t-2 border-[var(--gold-light)]">
-      <div className="max-w-3xl mx-auto px-6">
+      <div className="max-w-3xl mx-auto px-6 text-center">
 
         <p className="text-xs tracking-[0.5em] uppercase text-[var(--muted)] font-medium mb-6">
           Spolupráce
