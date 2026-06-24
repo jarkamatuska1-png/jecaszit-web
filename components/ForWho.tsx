@@ -1,12 +1,12 @@
 import BrushStroke from "./BrushStroke";
 
 const signs = [
-  "Ráno vstáváš a říkáš si: to je všechno?",
-  "Celý život hraješ roli, kterou jsi nikdy nepsala.",
-  "Zvládáš všechno — za cenu sebe sama.",
-  "Čekáš na správný čas. Ten správný čas nikdy nepřijde.",
-  "Víš, že máš víc. Jen nevíš jak na to.",
-  "Unavuje tě být silná pro všechny ostatní.",
+  "Ráno vstaneš a už dopředu víš, že dneska zase budeš hlavně fungovat.",
+  "Máš za sebou kus života. Ale někde uvnitř cítíš, že tohle ještě není konečná.",
+  "Celý život jsi byla spolehlivá. A teď zjišťuješ, že spolehlivost bez radosti je drahý sport.",
+  "Čekáš na správný čas. Jenže život ti mezitím ujíždí autobusem.",
+  "Víš, že máš na víc. Jen nevíš, kde začít, aby ses zase neztratila v dalším „musím".",
+  "Už nechceš být silná za cenu toho, že sama sebe potkáš až večer v koupelně.",
 ];
 
 export default function ForWho() {
