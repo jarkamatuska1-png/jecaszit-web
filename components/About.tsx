@@ -4,9 +4,9 @@ export default function About() {
   return (
     <section id="o-mne" className="py-28 bg-white border-t-2 border-[var(--gold-light)]">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
 
-          <div className="relative order-2 md:order-1">
+          <div className="relative order-2 md:order-1 md:sticky md:top-24">
             <div className="w-full aspect-[3/4] bg-[#f0ede8] relative overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center text-[var(--gold-light)]">
                 <span className="text-xs tracking-widest uppercase">foto</span>
@@ -16,36 +16,72 @@ export default function About() {
           </div>
 
           <div className="order-1 md:order-2">
-            <p className="text-xs tracking-[0.5em] uppercase text-[var(--gold)] font-medium mb-6">
+            <p className="text-xs tracking-[0.5em] uppercase text-[var(--muted)] font-medium mb-6">
               O mně
             </p>
 
-            <h2 className="font-heading text-4xl md:text-5xl font-semibold uppercase tracking-tight text-[var(--foreground)] leading-tight mb-4">
+            <h2 className="font-sans font-black text-4xl md:text-5xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-3">
               Nemluvím z knih.
             </h2>
-            <h2 className="font-heading text-4xl md:text-5xl font-semibold italic text-[var(--gold)] leading-tight mb-10">
+            <p
+              className="text-3xl md:text-4xl mb-10"
+              style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}
+            >
               Mluvím ze života.
-            </h2>
+            </p>
 
-            <div className="space-y-5 text-[var(--muted)] font-light leading-relaxed mb-10">
+            <div className="space-y-5 text-[var(--foreground)] font-light leading-relaxed">
+              <p className="font-medium">Jsem Jarka Matušková.</p>
+
               <p>
-                Jsem Jarka Matušková. Mámou jsem se stala v 21. Prošla jsem
-                vyhořením, dluhy i začínáním od nuly — a pak jsem přišla
-                na to, že celou dobu hraju špatnou hru.
+                Mámou jsem se stala ve 20 letech.
+                Prošla jsem vyhořením, dluhy, pády i začínáním od nuly.
               </p>
-              <p className="text-[var(--foreground)] font-medium">
-                Dnes vím co funguje. A chci, aby to věděly i ostatní ženy.
-              </p>
+
               <p>
-                Od roku 2015 pracuji s metodou JIH® — přístup, který pomáhá
-                ženám napřímit vztahy, zdraví, finance i pocit vlastní hodnoty.
-                Najednou. Propojené.
+                A jednoho dne mi došlo, že celý život nevyhraješ tím, že jsi neviditelná.
+              </p>
+
+              <p className="text-[var(--muted)]">
+                Že být hodná, silná a přizpůsobivá není životní strategie.
+                To je spíš pomalý způsob, jak se sama sobě ztratit z dohledu.
+              </p>
+
+              <p className="text-[var(--muted)]">
+                Nezměnily mě hezké věty. Ani motivační plakáty.
+                Ani další teorie, kterou si přečteš, odkýveš… a za týden zase jedeš po staru.
+              </p>
+
+              <div className="py-4">
+                <BrushStroke className="font-sans font-bold text-sm tracking-wide">
+                  Změnilo mě to, že jsem si přestala lhát.
+                </BrushStroke>
+              </div>
+
+              <p className="text-[var(--muted)]">
+                Kde se ohýbám. Kde čekám. Kde hraju roli.
+                Kde si říkám, že to ještě vydržím, i když už dávno nechci.
+              </p>
+
+              <p className="text-[var(--muted)]">
+                Jsem autorkou terapeutické metody JIH®.
+                A vím, že změna nezačíná tím, že čekáš na zázrak.
+              </p>
+
+              <p className="font-medium text-[var(--foreground)]">
+                Začíná tím, že se přestaneš chovat, jako by tvůj život
+                měl rozhodnout někdo jiný.
               </p>
             </div>
 
-            <BrushStroke className="font-medium text-sm">
-              Nejsem terapeut. Jsem žena, která ti řekne pravdu.
-            </BrushStroke>
+            <div className="mt-10">
+              <p
+                className="text-2xl"
+                style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}
+              >
+                Jarka Matušková
+              </p>
+            </div>
           </div>
 
         </div>
