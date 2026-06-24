@@ -1,4 +1,5 @@
 import BrushStroke from "./BrushStroke";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -7,10 +8,14 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
 
           <div className="relative order-2 md:order-1 md:sticky md:top-24">
-            <div className="w-full aspect-[3/4] bg-[#f0ede8] relative overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center text-[var(--gold-light)]">
-                <span className="text-xs tracking-widest uppercase">foto</span>
-              </div>
+            <div className="w-full aspect-[3/4] relative overflow-hidden">
+              <Image
+                src="/images/jarka-o-mne.jpg"
+                alt="Jarka Matušková"
+                fill
+                className="object-cover object-top"
+                priority
+              />
             </div>
             <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-[var(--gold)]" />
           </div>
