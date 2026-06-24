@@ -43,11 +43,23 @@ export default function AboutStrip() {
               </BrushStroke>
             </div>
 
-            <p className="text-[var(--muted)] font-light leading-relaxed mb-8">
+            <p className="text-[var(--muted)] font-light leading-relaxed mb-6">
               Jsem autorkou terapeutické metody JIH®. A vím, že změna nezačíná tím,
               že čekáš na zázrak — začíná tím, že se přestaneš chovat,
               jako by tvůj život měl rozhodnout někdo jiný.
             </p>
+
+            <div className="border-l-2 border-[var(--gold)] pl-5 mb-8 space-y-2">
+              <p className="text-xs tracking-[0.3em] uppercase font-medium mb-3" style={{ color: "var(--gold)" }}>Co je JIH®</p>
+              <p className="text-[var(--muted)] font-light leading-relaxed text-sm">
+                Metoda práce s vnímáním, emocemi a vnitřním nastavením.
+                Pomáhá uvidět, kde už nežiješ z pravdy, ale ze starých rolí, strachu nebo naučeného musím.
+              </p>
+              <p className="text-[var(--muted)] font-light leading-relaxed text-sm">
+                Nevede k nekonečnému rozebírání. Vede k jasnosti, změně postoje
+                a větší schopnosti tvořit svůj život vědomě a po svém.
+              </p>
+            </div>
 
             <p
               className="text-2xl"
