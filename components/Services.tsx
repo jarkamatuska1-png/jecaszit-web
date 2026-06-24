@@ -7,7 +7,7 @@ const offers = [
     number: "01",
     title: "Jeden společný hovor",
     duration: "30 minut / Zoom",
-    desc: "Pro chvíli, kdy cítíš, že nechceš další roky stát jen na tom, co ti kdo dovolí, nabídne nebo zaplatí. Bez tlaku. Bez přetvářky. Z hovoru odejdeš s jasnější představou, jak jít dál — a kde začít tvořit něco svého.",
+    desc: "Pro chvíli, kdy cítíš, že nechceš další roky stát jen na tom, co ti kdo dovolí, nabídne nebo zaplatí.\n\nMožná už nechceš být závislá jen na jedné výplatě, jedné roli nebo jednom systému.\n\nChceš si začít budovat vlastní prostor, větší stabilitu a zázemí, které stojí víc na tvém rozhodnutí.\n\nBez tlaku. Bez přetvářky. Bez hraní si na někoho, kým nejsi.\n\nZ hovoru odejdeš s jasnější představou, jak můžeš jít dál — a kde začít tvořit něco svého.",
   },
   {
     number: "02",
@@ -62,7 +62,11 @@ export default function Services() {
               </div>
               <p className="text-xs tracking-[0.3em] uppercase text-[var(--muted)] mb-3">{o.duration}</p>
               <h3 className="font-sans font-black text-lg uppercase tracking-tight text-[var(--foreground)] mb-4">{o.title}</h3>
-              <p className="text-[var(--muted)] font-light leading-relaxed mb-8">{o.desc}</p>
+              <div className="text-[var(--muted)] font-light leading-relaxed mb-8 space-y-3">
+                {o.desc.split("\n\n").map((para, j) => (
+                  <p key={j}>{para}</p>
+                ))}
+              </div>
               <a
                 href={WA}
                 target="_blank"
@@ -75,10 +79,17 @@ export default function Services() {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <BrushStroke className="font-sans font-bold text-sm md:text-base">
-            Velký holky už nečekají, až jim někdo postaví zázemí. Začnou si ho tvořit samy.
-          </BrushStroke>
+        <div className="mt-16 text-center space-y-4">
+          <p className="text-[var(--muted)] font-light leading-relaxed">
+            Žádné kurzy do šuplíku. Žádné čekání na povolení.
+            <br />
+            Jen jeden společný hovor o tom, jak si můžeš začít budovat vlastní zázemí, stabilitu a novou kapitolu života.
+          </p>
+          <div className="pt-4">
+            <BrushStroke className="font-sans font-bold text-sm md:text-base">
+              Velký holky už nečekají, až jim někdo postaví zázemí. Začnou si ho tvořit samy.
+            </BrushStroke>
+          </div>
         </div>
 
       </div>
