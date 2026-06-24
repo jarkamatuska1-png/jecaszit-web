@@ -43,7 +43,7 @@ export default function Services() {
             <p className="font-medium text-[var(--foreground)]">Pak se rozhodneš sama.</p>
 
             <div className="pt-4">
-              <BrushStroke className="font-sans font-bold text-sm">
+              <BrushStroke block className="font-sans font-bold text-sm">
                 Protože velký holky nepotřebují tlak. Potřebují vidět, že mají možnosti.
               </BrushStroke>
             </div>

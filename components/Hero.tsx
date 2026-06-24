@@ -35,7 +35,7 @@ export default function Hero() {
           />
           {/* Text přes fotku dole */}
           <div className="absolute bottom-0 left-0 right-0 px-6 pb-8">
-            <p className="text-xs tracking-[0.4em] uppercase font-medium mb-2" style={{ color: "var(--gold)" }}>
+            <p className="text-xs tracking-[0.4em] uppercase font-medium mb-2 text-white drop-shadow-md">
               — Jarka Matušková —
             </p>
             <h1 className="leading-none mb-3">

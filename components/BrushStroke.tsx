@@ -1,6 +1,6 @@
-export default function BrushStroke({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+export default function BrushStroke({ children, className = "", block = false }: { children: React.ReactNode; className?: string; block?: boolean }) {
   return (
-    <span className={`relative inline-block ${className}`}>
+    <span className={`relative ${block ? "block w-full" : "inline-block"} ${className}`}>
       <span
         className="absolute inset-0"
         style={{
@@ -9,7 +9,7 @@ export default function BrushStroke({ children, className = "" }: { children: Re
           zIndex: 0,
         }}
       />
-      <span className="relative z-10 text-white px-4 py-1">{children}</span>
+      <span className="relative z-10 text-white px-4 py-2 block">{children}</span>
     </span>
   );
 }
