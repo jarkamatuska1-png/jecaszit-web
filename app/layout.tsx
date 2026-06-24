@@ -22,6 +22,9 @@ const dancing = Dancing_Script({
 });
 
 export const metadata: Metadata = {
+  verification: {
+    google: "xQQSjb52K1wI76cpN1aMpW-SX-UqijfUucG53V5udw4",
+  },
   title: "Je čas žít | Jarka Matušková",
   description: "Pro velké holky, které chtějí od života víc. Jeden společný hovor může ukázat tvoje další možnosti.",
   metadataBase: new URL("https://jecaszit.cz"),
