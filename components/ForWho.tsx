@@ -5,39 +5,48 @@ const signs = [
   "Máš za sebou kus života. Ale někde uvnitř cítíš, že tohle ještě není konečná.",
   "Celý život jsi byla spolehlivá. A teď zjišťuješ, že spolehlivost bez radosti je drahý sport.",
   "Čekáš na správný čas. Jenže život ti mezitím ujíždí autobusem.",
-  "Víš, že máš na víc. Jen nevíš, kde začít, aby ses zase neztratila v dalším „musím“.",
+  "Víš, že máš na víc. Jen nevíš, kde začít, aby ses zase neztratila v dalším „musím".",
   "Už nechceš být silná za cenu toho, že sama sebe potkáš až večer v koupelně.",
 ];
 
 export default function ForWho() {
   return (
-    <section id="pro-koho" className="py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="pro-koho" className="py-28 bg-white border-t-2 border-[var(--gold-light)]">
+      <div className="max-w-4xl mx-auto px-6">
 
         <div className="text-center mb-20">
           <p className="text-xs tracking-[0.5em] uppercase text-[var(--gold)] font-medium mb-6">
             Je to pro tebe?
           </p>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-[var(--foreground)] uppercase tracking-tight leading-tight mb-8">
+          <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-4">
             Poznáváš se
-            <br />
-            <span className="italic normal-case text-[var(--gold)]">v tomhle?</span>
           </h2>
+          <p
+            className="text-3xl md:text-4xl"
+            style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}
+          >
+            v tomhle?
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-0 mb-20">
+        <div className="space-y-12 mb-20">
           {signs.map((sign, i) => (
-            <div key={i} className="flex gap-6 p-8 border border-[var(--gold-light)] -mt-px -ml-px hover:border-[var(--gold)] hover:z-10 relative transition-colors duration-300 group">
-              <span className="font-heading text-2xl font-semibold text-[var(--gold-light)] group-hover:text-[var(--gold)] transition-colors shrink-0">
+            <div key={i} className="flex gap-8 items-start group">
+              <span
+                className="font-sans font-black text-3xl md:text-4xl shrink-0 leading-none mt-1"
+                style={{ color: "var(--gold-light)" }}
+              >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="text-[var(--foreground)] font-light leading-relaxed self-center">{sign}</p>
+              <p className="text-lg md:text-xl text-[var(--foreground)] font-light leading-relaxed pt-1">
+                {sign}
+              </p>
             </div>
           ))}
         </div>
 
         <div className="text-center">
-          <BrushStroke className="font-heading text-lg md:text-xl font-semibold">
+          <BrushStroke block className="font-sans font-bold text-sm md:text-base">
             Jestli ses aspoň v jednom poznala — tady začíná tvoje další kapitola.
           </BrushStroke>
         </div>
