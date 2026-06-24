@@ -2,14 +2,14 @@ export default function BrushStroke({ children, className = "" }: { children: Re
   return (
     <span className={`relative inline-block ${className}`}>
       <span
-        className="absolute inset-0 -skew-x-1"
+        className="absolute inset-0"
         style={{
-          background: "var(--gold)",
-          clipPath: "polygon(0% 10%, 1% 0%, 99% 3%, 100% 15%, 99.5% 82%, 100% 100%, 1% 97%, 0% 88%)",
+          background: "linear-gradient(to right, #9a7020 0%, #e8c96e 25%, #f5e07e 48%, #d4af5a 65%, #9a7020 85%, #e0c060 100%)",
+          clipPath: "polygon(0% 18%, 0.5% 0%, 99% 4%, 100% 22%, 99.5% 78%, 100% 100%, 1% 96%, 0% 82%)",
           zIndex: 0,
         }}
       />
-      <span className="relative z-10 text-white px-3 py-0.5">{children}</span>
+      <span className="relative z-10 text-white px-4 py-1">{children}</span>
     </span>
   );
 }

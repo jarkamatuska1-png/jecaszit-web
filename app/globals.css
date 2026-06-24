@@ -1,34 +1,41 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #2C2C2C;
   --gold: #C9A96E;
   --gold-light: #E8D5B0;
-  --gold-dark: #A07840;
-  --cream: #FAF8F5;
-  --cream-dark: #EDE8E0;
-  --muted: #7A7A7A;
+  --gold-dark: #9A7020;
+  --foreground: #1A1A1A;
+  --muted: #6B6B6B;
+  --gold-gradient-h: linear-gradient(to right, #9a7020 0%, #e8c96e 25%, #f5e07e 48%, #d4af5a 65%, #9a7020 85%, #e0c060 100%);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --color-gold: var(--gold);
   --color-gold-light: var(--gold-light);
   --color-gold-dark: var(--gold-dark);
-  --color-cream: var(--cream);
-  --color-cream-dark: var(--cream-dark);
+  --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --font-sans: var(--font-dm-sans);
-  --font-heading: var(--font-syne);
+  --font-heading: var(--font-dm-sans);
+  --font-script: var(--font-script);
 }
 
 body {
-  background: var(--background);
+  background: #ffffff;
   color: var(--foreground);
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.gold-text {
+  background: var(--gold-gradient-h);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-bg {
+  background: var(--gold-gradient-h);
 }
