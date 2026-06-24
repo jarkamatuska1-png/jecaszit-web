@@ -5,7 +5,7 @@ const signs = [
   "Máš za sebou kus života. Ale někde uvnitř cítíš, že tohle ještě není konečná.",
   "Celý život jsi byla spolehlivá. A teď zjišťuješ, že spolehlivost bez radosti je drahý sport.",
   "Čekáš na správný čas. Jenže život ti mezitím ujíždí autobusem.",
-  "Víš, že máš na víc. Jen nevíš, kde začít, aby ses zase neztratila v dalším „musím".",
+  "Víš, že máš na víc. Jen nevíš, kde začít, aby ses zase neztratila v dalším musím.",
   "Už nechceš být silná za cenu toho, že sama sebe potkáš až večer v koupelně.",
 ];
 
