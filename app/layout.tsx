@@ -23,15 +23,22 @@ const dancing = Dancing_Script({
 
 export const metadata: Metadata = {
   title: "Je čas žít | Jarka Matušková",
-  description: "Velký holky chtějí od života víc. Mnohem víc. Jarka Matušková — koučink, mentoring, spolupráce.",
+  description: "Pro velké holky, které chtějí od života víc. Jeden společný hovor může ukázat tvoje další možnosti.",
   metadataBase: new URL("https://jecaszit.cz"),
   openGraph: {
     title: "Je čas žít | Jarka Matušková",
-    description: "Velký holky chtějí od života víc. Mnohem víc.",
+    description: "Pro velké holky, které chtějí od života víc. Jeden společný hovor může ukázat tvoje další možnosti.",
     url: "https://jecaszit.cz",
     siteName: "Je čas žít",
     locale: "cs_CZ",
     type: "website",
+    images: [{ url: "/images/jarka-mockup.jpg", width: 1920, height: 720, alt: "Jarka Matušková — Je čas žít" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Je čas žít | Jarka Matušková",
+    description: "Pro velké holky, které chtějí od života víc.",
+    images: ["/images/jarka-mockup.jpg"],
   },
 };
 
