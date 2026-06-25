@@ -49,6 +49,19 @@ export default function Nav() {
                 {l.label}
               </a>
             ))}
+            <a
+              href="https://www.instagram.com/j_matuskova/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-[var(--muted)] hover:text-[var(--gold)] transition-colors"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
           </div>
 
           {/* Hamburger — jen mobil */}
@@ -97,6 +110,21 @@ export default function Nav() {
             {l.label}
           </a>
         ))}
+
+        <a
+          href="https://www.instagram.com/j_matuskova/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={close}
+          className="text-sm tracking-[0.3em] uppercase font-medium text-[var(--muted)] hover:text-[var(--gold)] transition-colors flex items-center gap-2"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+          Instagram
+        </a>
 
         <a
           href="https://wa.me/420774420251?text=Ahoj+Jarko%2C+ráda+bych+si+s+tebou+popovídala."
