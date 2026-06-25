@@ -15,8 +15,8 @@ const cards = [
         <path d="M12 3c-1.5 3-5 4-7 4 0 6 2.5 10 7 13 4.5-3 7-7 7-13-2 0-5.5-1-7-4z" strokeLinejoin="round"/>
       </svg>
     ),
-    title: "Moji podporu",
-    text: "Nebudu tě vést za ručičku ani tě nechávat tápit. Dostaneš mou přímou, lidskou a laskavou drsnou podporu. Zkušenost ženy, která ví, jaké to je začínat znovu.",
+    title: "Skvělé pracovní zázemí",
+    text: "Prostor, ve kterém najdeš veškeré informace a také mentální podporu, možnost se ukotvit ve své víře v sebe a svůj úspěch. Zázemí, které najdeš jen v podpoře se mnou.",
   },
   {
     icon: (
