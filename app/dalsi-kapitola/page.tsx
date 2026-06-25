@@ -16,7 +16,7 @@ const cards = [
       </svg>
     ),
     title: "Skvělé pracovní zázemí",
-    text: "Prostor, ve kterém najdeš veškeré informace a také mentální podporu, možnost se ukotvit ve své víře v sebe a svůj úspěch. Zázemí, které najdeš jen v podpoře se mnou.",
+    text: "Prostor, ve kterém najdeš veškeré informace a také mentální podporu, možnost se ukotvit ve své víře v sebe a svůj úspěch.",
   },
   {
     icon: (
@@ -25,7 +25,7 @@ const cards = [
       </svg>
     ),
     title: "Moji podporu",
-    text: "Nebudu tě vést za ručičku ani tě nechávat tápit. Dostaneš mou přímou, lidskou a laskavou drsnou podporu. Zkušenost ženy, která ví, jaké to je začínat znovu.",
+    text: "Nebudu tě vést za ručičku ani tě nechávat tápit. Dostaneš mou přímou, lidskou a laskavou drsnou podporu. Zkušenost ženy, která ví, jaké to je začínat znovu — i po padesátce.",
   },
   {
     icon: (
@@ -35,13 +35,13 @@ const cards = [
       </svg>
     ),
     title: "Jasnost a směr",
-    text: "Jeden hovor ti může ukázat víc, než roky přemýšlení v kruhu. Podíváme se kde jsi, co chceš a co je pro tebe skutečně možné.",
+    text: "Jeden hovor ti může ukázat víc, než roky přemýšlení v kruhu. Podíváme se, kde jsi, co chceš a co je pro tebe skutečně možné.",
   },
 ];
 
 const proKoho = [
-  "Pro ženu, která už něco dokázala, ale nechce dál žít v cizím systému.",
-  "Pro ženu, která chce vlastní směr, vlastní peníze a větší svobodu.",
+  "Pro ženu po padesátce, která už něco dokázala, ale nechce dál žít podle pravidel, která si nezvolila sama.",
+  "Pro ženu, která chce vlastní směr, vlastní peníze a větší svobodu — bez ohledu na to, kolik jí je.",
   "Pro ženu, která už nechce čekat, až jí někdo dovolí chtít víc.",
 ];
 
@@ -84,17 +84,18 @@ export default function LandingPage() {
 
           <div>
             <p className="text-xs tracking-[0.4em] uppercase font-medium mb-5" style={{ color: "var(--gold)" }}>
-              Je čas žít
+              Tvoje další kapitola
             </p>
             <h1 className="font-sans font-black text-4xl md:text-5xl tracking-tight text-[var(--foreground)] leading-tight mb-4">
-              Postav se znovu<br />na své nohy.
+              Po padesátce ti život nekončí.
             </h1>
             <p className="text-2xl md:text-3xl mb-8 leading-snug" style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}>
-              Ne sama. Se zázemím,<br />které tě podpoří.
+              Někdy ti teprve dojde, že ho chceš konečně žít po svém.
             </p>
-            <p className="text-[var(--muted)] font-light leading-relaxed mb-8 max-w-md">
-              Možná už víš, že nechceš další roky jen fungovat pro cizí systém. Chceš vlastní jistotu. Vlastní směr. Vlastní peníze. A také místo, kde můžeš růst s klidem, úrovní a podporou. Právě pro tebe vznikla tahle nová možnost.
-            </p>
+            <div className="space-y-4 text-[var(--muted)] font-light leading-relaxed mb-8 max-w-md">
+              <p>Vybudovala jsi si pozici. Ustála sis ledacos. Jenže už tě nebaví poslouchat řeči o loajalitě, čekat na uznání a dál žít život, který je menší, než cítíš uvnitř sebe.</p>
+              <p>Já vím, jaké je to začínat znovu. Po pádech, dluzích, zradě i chvílích, kdy se všechno sesype. A právě proto vím, že nový směr existuje. Ne pohádka. Skutečný život, ve kterém můžeš znovu postavit jistotu, peníze, úctu k sobě i úspěch.</p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href={WA}
@@ -221,7 +222,7 @@ export default function LandingPage() {
         <div className="max-w-3xl mx-auto px-6 md:flex items-center justify-between gap-12">
           <div className="mb-8 md:mb-0">
             <h2 className="font-sans font-black text-3xl md:text-4xl text-[var(--foreground)] leading-tight mb-2">
-              Velký holky chtějí od života víc.
+              Velké holky chtějí od života víc.
             </h2>
             <p className="text-2xl" style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}>
               Mnohem víc.
