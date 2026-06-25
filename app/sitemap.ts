@@ -9,6 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: "https://jecaszit.cz/blog",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
       url: "https://jecaszit.cz/o-mne",
       lastModified: new Date(),
       changeFrequency: "yearly",

@@ -5,6 +5,7 @@ const links = [
   { href: "#pro-koho", label: "Pro koho" },
   { href: "#spoluprace", label: "Spolupráce" },
   { href: "/o-mne", label: "O mně" },
+  { href: "/blog", label: "Blog" },
   { href: "#kontakt", label: "Kontakt" },
 ];
 
