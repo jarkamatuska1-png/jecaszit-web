@@ -6,7 +6,7 @@ export const metadata = {
   robots: "noindex",
 };
 
-const WA = "https://wa.me/420774420251?text=Ahoj+Jarko%2C+přišla+jsem+z+reklamy+a+ráda+bych+si+s+tebou+popovídala.";
+const WA = "https://wa.me/420774420251?text=Ahoj+Jarko%2C+chci+zjistit%2C+co+by+mohlo+b%C3%BDt+moje+dal%C5%A1%C3%AD+kapitola.";
 
 const cards = [
   {
