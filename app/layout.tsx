@@ -57,6 +57,31 @@ export default function RootLayout({
       className={`${dmSans.variable} ${playfair.variable} ${dancing.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Jarka Matušková",
+              url: "https://jecaszit.cz",
+              image: "https://jecaszit.cz/images/jarka-o-mne.jpg",
+              sameAs: [
+                "https://www.instagram.com/j_matuskova/",
+                "https://www.facebook.com/jarka.matuskova",
+              ],
+              jobTitle: "Koučka a autorka metody JIH®",
+              description: "Pomáhám ženám, které chtějí od života víc. Jeden společný hovor může ukázat tvoje další možnosti.",
+              knowsAbout: ["osobní rozvoj", "metoda JIH®", "koučink žen", "změna života"],
+              offers: {
+                "@type": "Offer",
+                name: "Úvodní hovor",
+                description: "Jeden společný hovor, kde se podíváme na tvoje další možnosti.",
+                url: "https://jecaszit.cz/#spoluprace",
+              },
+            }),
+          }}
+        />
         {children}
         <Analytics />
       </body>
