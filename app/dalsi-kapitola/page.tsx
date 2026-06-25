@@ -16,7 +16,7 @@ const cards = [
       </svg>
     ),
     title: "Skvělé pracovní zázemí",
-    text: "Prostor, ve kterém najdeš veškeré informace a také mentální podporu, možnost se ukotvit ve své víře v sebe a svůj úspěch.",
+    text: "Prostor, ve kterém najdeš veškeré informace a také mentální podporu, možnost se ukotvit ve své víře v sebe a svůj úspěch. Zázemí, které najdeš jen v podpoře se mnou.",
   },
   {
     icon: (
