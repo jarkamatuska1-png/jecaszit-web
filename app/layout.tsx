@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     siteName: "Je čas žít",
     locale: "cs_CZ",
     type: "website",
-    images: [{ url: "/images/jarka-mockup.jpg", width: 1920, height: 720, alt: "Jarka Matušková — Je čas žít" }],
+    images: [{ url: "/images/jarka-o-mne.jpg", width: 1200, height: 630, alt: "Jarka Matušková — Je čas žít" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Je čas žít | Jarka Matušková",
     description: "Pro velké holky, které chtějí od života víc.",
-    images: ["/images/jarka-mockup.jpg"],
+    images: ["/images/jarka-o-mne.jpg"],
   },
 };
 
