@@ -18,7 +18,7 @@ export default function AboutPage() {
           <div className="relative md:sticky md:top-24">
             <div className="w-full aspect-[3/4] relative overflow-hidden">
               <Image
-                src="/images/jarka-hlavni.jpg"
+                src="/images/jarka-ja.jpg"
                 alt="Jarka Matušková"
                 fill
                 className="object-cover object-top"
