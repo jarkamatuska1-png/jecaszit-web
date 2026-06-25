@@ -62,11 +62,17 @@ export default function AboutStrip() {
             </div>
 
             <p
-              className="text-2xl"
+              className="text-2xl mb-6"
               style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}
             >
               Jarka Matušková
             </p>
+            <a
+              href="/o-mne"
+              className="text-xs tracking-[0.3em] uppercase font-bold border-b-2 border-[var(--gold)] text-[var(--gold)] hover:opacity-70 transition-opacity pb-1"
+            >
+              Přečíst celý příběh →
+            </a>
           </div>
 
         </div>
