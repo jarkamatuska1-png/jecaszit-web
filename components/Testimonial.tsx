@@ -15,6 +15,13 @@ const testimonials = [
     ],
     author: "Veronika",
   },
+  {
+    text: [
+      "Moc děkuji za dnešní setkání.",
+      "Bylo to úplně obyčejné povídání, a přitom mi přineslo velmi silná uvědomění.",
+    ],
+    author: "Magda",
+  },
 ];
 
 export default function Testimonial() {
@@ -26,7 +33,7 @@ export default function Testimonial() {
           Reference
         </p>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-3 gap-10">
           {testimonials.map((t, i) => (
             <div key={i} className="flex flex-col">
               <p
