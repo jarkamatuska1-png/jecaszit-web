@@ -93,8 +93,11 @@ export default function LandingPage() {
               Někdy ti teprve dojde, že ho chceš konečně žít po svém.
             </p>
             <div className="space-y-4 text-[var(--muted)] font-light leading-relaxed mb-8 max-w-md">
-              <p>Vybudovala jsi si pozici. Ustála sis ledacos. Jenže už tě nebaví poslouchat řeči o loajalitě, čekat na uznání a dál žít život, který je menší, než cítíš uvnitř sebe.</p>
-              <p>Já vím, jaké je to začínat znovu. Po pádech, dluzích, zradě i chvílích, kdy se všechno sesype. A právě proto vím, že nový směr existuje. Ne pohádka. Skutečný život, ve kterém můžeš znovu postavit jistotu, peníze, úctu k sobě i úspěch.</p>
+              <p>Vybudovala jsi si pozici. Ustála sis ledaccos. Jenže už tě nebaví poslouchat řeči o loajalitě, čekat na uznání a dál žít život, který je menší, než cítíš uvnitř sebe.</p>
+              <p>Já vím, jaké je to začínat znovu. Ne jednou — několikrát.</p>
+              <p>Krachující obchod. Dluhy. Měsíc v nemocnici po operaci páteře, který mi vzal podnikání, které jsem zrovna postavila. Důvěru, která se obrátila proti mně, právě když jsem ji nejvíc potřebovala.</p>
+              <p>A přesto jsem pokaždé znovu vstala. Ne proto, že bych byla nezničitelná — ale proto, že někde uvnitř bylo pořád něco, co odmítlo skončit.</p>
+              <p>A právě proto vím, že nový směr existuje. Ne pohádka. Skutečný život, ve kterém můžeš znovu postavit jistotu, peníze, úctu k sobě i úspěch.</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
