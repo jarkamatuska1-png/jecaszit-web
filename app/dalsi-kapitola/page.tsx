@@ -196,6 +196,26 @@ export default function LandingPage() {
         </div>
       </div>
 
+      {/* Reference */}
+      <div className="max-w-5xl mx-auto px-6 py-16">
+        <p className="text-center text-xs tracking-[0.5em] uppercase text-[var(--muted)] font-medium mb-12">Co říkají ženy</p>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            { text: "Bylo to úplně obyčejné povídání, a přitom mi přineslo velmi silná uvědomění.", author: "Magda" },
+            { text: "Když se ocitnu v nejistotě a nevím, jak dál, Jarka mi pomůže znovu vidět cestu. Moje situace se pak velmi rychle začne měnit.", author: "Veronika" },
+            { text: "Je skvělé mít Jarku v zádech. Život je i ve složitých situacích mnohem jednodušší.", author: "Alex" },
+          ].map((t, i) => (
+            <div key={i} className="flex flex-col">
+              <p className="text-4xl mb-4 leading-none" style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}>
+                &ldquo;
+              </p>
+              <p className="text-[var(--foreground)] font-light leading-relaxed flex-1 mb-6 italic">{t.text}</p>
+              <p className="text-xl" style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}>{t.author}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Spodní CTA */}
       <div className="bg-[#faf8f4] py-16">
         <div className="max-w-3xl mx-auto px-6 md:flex items-center justify-between gap-12">
