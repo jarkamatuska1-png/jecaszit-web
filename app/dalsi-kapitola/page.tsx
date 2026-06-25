@@ -12,11 +12,20 @@ const cards = [
   {
     icon: (
       <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M12 3c-1.5 3-5 4-7 4 0 6 2.5 10 7 13 4.5-3 7-7 7-13-2 0-5.5-1-7-4z" strokeLinejoin="round"/>
+        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9" strokeLinecap="round"/>
       </svg>
     ),
     title: "Skvělé pracovní zázemí",
     text: "Prostor, ve kterém najdeš veškeré informace a také mentální podporu, možnost se ukotvit ve své víře v sebe a svůj úspěch. Zázemí, které najdeš jen v podpoře se mnou.",
+  },
+  {
+    icon: (
+      <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path d="M12 3c-1.5 3-5 4-7 4 0 6 2.5 10 7 13 4.5-3 7-7 7-13-2 0-5.5-1-7-4z" strokeLinejoin="round"/>
+      </svg>
+    ),
+    title: "Moji podporu",
+    text: "Nebudu tě vést za ručičku ani tě nechávat tápit. Dostaneš mou přímou, lidskou a laskavou drsnou podporu. Zkušenost ženy, která ví, jaké to je začínat znovu.",
   },
   {
     icon: (
@@ -27,15 +36,6 @@ const cards = [
     ),
     title: "Jasnost a směr",
     text: "Jeden hovor ti může ukázat víc, než roky přemýšlení v kruhu. Podíváme se kde jsi, co chceš a co je pro tebe skutečně možné.",
-  },
-  {
-    icon: (
-      <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z" strokeLinejoin="round"/>
-      </svg>
-    ),
-    title: "Zázemí pro nový růst",
-    text: "Nejen rozhovor. Ale oporu pro novou kapitolu, ve které můžeš postavit jistotu, úctu k sobě a úspěch, který si zasloužíš.",
   },
 ];
 
