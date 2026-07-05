@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-const WA = "https://wa.me/420774420251?text=Ahoj+Jarko%2C+ráda+bych+si+s+tebou+popovídala.";
-
 export default function Hero() {
   return (
     <section className="bg-white pt-16 min-h-screen relative overflow-hidden">
@@ -37,7 +35,7 @@ export default function Hero() {
             </p>
 
             <h1 className="leading-none mb-6">
-              <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[var(--foreground)]">
+              <span className="block font-sans font-black text-5xl md:text-6xl lg:text-7xl uppercase tracking-tight text-[var(--heading)]">
                 Je čas
               </span>
               <span
@@ -58,13 +56,11 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href={WA}
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/kviz"
                 className="inline-block px-8 py-4 text-white text-xs tracking-[0.3em] uppercase font-bold hover:opacity-90 transition-opacity text-center"
-                style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+                style={{ background: "var(--gold)" }}
               >
-                Chci si popovídat
+                Udělat kvíz
               </a>
               <a
                 href="#pro-koho"

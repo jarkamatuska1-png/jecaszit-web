@@ -11,7 +11,7 @@ export default function Contact() {
           Kontakt
         </p>
 
-        <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-3">
+        <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-[var(--heading)] leading-tight mb-3">
           Přestaň čekat.
         </h2>
         <p
@@ -37,7 +37,7 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-12 py-5 text-white text-xs tracking-[0.35em] uppercase font-bold hover:opacity-90 transition-opacity duration-300 mb-16"
-          style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+          style={{ background: "var(--gold)" }}
         >
           Napsat Jarce na WhatsApp →
         </a>

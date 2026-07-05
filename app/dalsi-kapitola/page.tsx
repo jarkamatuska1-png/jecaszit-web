@@ -58,7 +58,7 @@ export default function LandingPage() {
             style={{
               fontFamily: "var(--font-script)",
               fontSize: "1.25rem",
-              background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)",
+              background: "var(--gold)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -71,7 +71,7 @@ export default function LandingPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-block px-6 py-3 text-white text-xs tracking-[0.2em] uppercase font-bold hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+            style={{ background: "var(--gold)" }}
           >
             Domluvit hovor
           </a>
@@ -86,7 +86,7 @@ export default function LandingPage() {
             <p className="text-xs tracking-[0.4em] uppercase font-medium mb-5" style={{ color: "var(--gold)" }}>
               Tvoje další kapitola
             </p>
-            <h1 className="font-sans font-black text-4xl md:text-5xl tracking-tight text-[var(--foreground)] leading-tight mb-4">
+            <h1 className="font-sans font-black text-4xl md:text-5xl tracking-tight text-[var(--heading)] leading-tight mb-4">
               Po padesátce ti život nekončí.
             </h1>
             <p className="text-2xl md:text-3xl mb-8 leading-snug" style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}>
@@ -105,7 +105,7 @@ export default function LandingPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 text-white text-xs tracking-[0.2em] uppercase font-bold hover:opacity-90 transition-opacity"
-                style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+                style={{ background: "var(--gold)" }}
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 01-4.065-1.112l-.291-.174-3.018.897.897-3.018-.174-.291A7.96 7.96 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.406-5.845c-.242-.121-1.432-.707-1.654-.787-.222-.08-.384-.121-.545.121-.162.242-.626.787-.768.949-.141.162-.283.182-.525.06-.242-.121-1.022-.376-1.947-1.197-.719-.641-1.204-1.432-1.346-1.674-.141-.242-.015-.373.106-.494.109-.109.242-.283.363-.424.121-.141.162-.242.242-.404.08-.162.04-.303-.02-.424-.06-.121-.545-1.315-.747-1.8-.196-.472-.397-.408-.545-.415h-.464c-.162 0-.424.06-.646.303-.222.242-.848.828-.848 2.021 0 1.193.868 2.346.989 2.508.121.162 1.71 2.609 4.144 3.659.579.25 1.031.399 1.383.511.581.185 1.11.159 1.528.096.466-.069 1.432-.585 1.633-1.15.202-.564.202-1.048.141-1.15-.06-.1-.222-.16-.464-.282z"/></svg>
                 Klikni a pojď zjistit, co by mohlo být tvoje další kapitola.
@@ -133,7 +133,7 @@ export default function LandingPage() {
       </div>
 
       {/* Co u mě můžeš získat */}
-      <div className="bg-[#faf8f4] py-16">
+      <div className="bg-[#F7F1E8] py-16">
         <div className="max-w-5xl mx-auto px-6">
           <p className="text-center text-xs tracking-[0.5em] uppercase text-[var(--muted)] font-medium mb-3">Co u mě můžeš získat</p>
           <div
@@ -148,7 +148,7 @@ export default function LandingPage() {
                 <div className="inline-flex items-center justify-center w-14 h-14 mb-5 rounded-full border border-[var(--gold-light)]" style={{ color: "var(--gold)" }}>
                   {card.icon}
                 </div>
-                <h3 className="font-sans font-black text-sm uppercase tracking-wide text-[var(--foreground)] mb-4">
+                <h3 className="font-sans font-black text-sm uppercase tracking-wide text-[var(--heading)] mb-4">
                   {card.title}
                 </h3>
                 <p className="text-[var(--muted)] font-light leading-relaxed text-sm">
@@ -186,7 +186,7 @@ export default function LandingPage() {
             <div className="space-y-5">
               {proKoho.map((item, i) => (
                 <div key={i} className="flex gap-4 items-start">
-                  <div className="w-5 h-5 rounded-full shrink-0 mt-0.5 flex items-center justify-center" style={{ background: "linear-gradient(to right, #9a7020, #d4af5a)" }}>
+                  <div className="w-5 h-5 rounded-full shrink-0 mt-0.5 flex items-center justify-center" style={{ background: "var(--gold)" }}>
                     <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
                       <path d="M2 6l3 3 5-5" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -221,10 +221,10 @@ export default function LandingPage() {
       </div>
 
       {/* Spodní CTA */}
-      <div className="bg-[#faf8f4] py-16">
+      <div className="bg-[#F7F1E8] py-16">
         <div className="max-w-3xl mx-auto px-6 md:flex items-center justify-between gap-12">
           <div className="mb-8 md:mb-0">
-            <h2 className="font-sans font-black text-3xl md:text-4xl text-[var(--foreground)] leading-tight mb-2">
+            <h2 className="font-sans font-black text-3xl md:text-4xl text-[var(--heading)] leading-tight mb-2">
               Velké holky chtějí od života víc.
             </h2>
             <p className="text-2xl" style={{ fontFamily: "var(--font-script)", color: "var(--gold)" }}>
@@ -240,7 +240,7 @@ export default function LandingPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 text-white text-xs tracking-[0.2em] uppercase font-bold hover:opacity-90 transition-opacity whitespace-nowrap"
-              style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+              style={{ background: "var(--gold)" }}
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.96 9.96 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.96 7.96 0 01-4.065-1.112l-.291-.174-3.018.897.897-3.018-.174-.291A7.96 7.96 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8zm4.406-5.845c-.242-.121-1.432-.707-1.654-.787-.222-.08-.384-.121-.545.121-.162.242-.626.787-.768.949-.141.162-.283.182-.525.06-.242-.121-1.022-.376-1.947-1.197-.719-.641-1.204-1.432-1.346-1.674-.141-.242-.015-.373.106-.494.109-.109.242-.283.363-.424.121-.141.162-.242.242-.404.08-.162.04-.303-.02-.424-.06-.121-.545-1.315-.747-1.8-.196-.472-.397-.408-.545-.415h-.464c-.162 0-.424.06-.646.303-.222.242-.848.828-.848 2.021 0 1.193.868 2.346.989 2.508.121.162 1.71 2.609 4.144 3.659.579.25 1.031.399 1.383.511.581.185 1.11.159 1.528.096.466-.069 1.432-.585 1.633-1.15.202-.564.202-1.048.141-1.15-.06-.1-.222-.16-.464-.282z"/></svg>
               Domluvit osobní hovor

@@ -34,7 +34,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           {formatDate(post.date)}
         </p>
 
-        <h1 className="font-sans font-black text-3xl md:text-4xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-12">
+        <h1 className="font-sans font-black text-3xl md:text-4xl uppercase tracking-tight text-[var(--heading)] leading-tight mb-12">
           {post.title}
         </h1>
 
@@ -53,7 +53,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 text-white text-xs tracking-[0.3em] uppercase font-bold hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+            style={{ background: "var(--gold)" }}
           >
             Napsat Jarce →
           </a>

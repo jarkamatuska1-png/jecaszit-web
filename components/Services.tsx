@@ -1,7 +1,5 @@
 import BrushStroke from "./BrushStroke";
 
-const WA = "https://wa.me/420774420251?text=Ahoj+Jarko%2C+ráda+bych+si+s+tebou+popovídala.";
-
 export default function Services() {
   return (
     <section id="spoluprace" className="py-28 bg-white border-t-2 border-[var(--gold-light)]">
@@ -11,7 +9,7 @@ export default function Services() {
           Spolupráce
         </p>
 
-        <h2 className="font-sans font-black text-4xl md:text-5xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-2">
+        <h2 className="font-sans font-black text-4xl md:text-5xl uppercase tracking-tight text-[var(--heading)] leading-tight mb-2">
           Podíváme se,
         </h2>
         <p
@@ -43,13 +41,11 @@ export default function Services() {
         </div>
 
         <a
-          href={WA}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/kviz"
           className="inline-block px-12 py-5 text-white text-xs tracking-[0.3em] uppercase font-bold hover:opacity-90 transition-opacity duration-300"
-          style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+          style={{ background: "var(--gold)" }}
         >
-          Chci ten hovor →
+          Udělat kvíz →
         </a>
 
       </div>

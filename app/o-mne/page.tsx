@@ -33,7 +33,7 @@ export default function AboutPage() {
             <p className="text-xs tracking-[0.5em] uppercase text-[var(--muted)] font-medium mb-6">
               O mně
             </p>
-            <h1 className="font-sans font-black text-4xl md:text-5xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-8">
+            <h1 className="font-sans font-black text-4xl md:text-5xl uppercase tracking-tight text-[var(--heading)] leading-tight mb-8">
               Vím, jaké to je<br />začínat znovu
             </h1>
 
@@ -185,7 +185,7 @@ export default function AboutPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 text-white text-xs tracking-[0.3em] uppercase font-bold hover:opacity-90 transition-opacity"
-            style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+            style={{ background: "var(--gold)" }}
           >
             Chci si popovídat →
           </a>

@@ -31,7 +31,7 @@ export default function Nav() {
             href="#"
             className="font-sans text-sm font-black tracking-[0.3em] uppercase"
             style={{
-              background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)",
+              background: "var(--gold)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -129,14 +129,12 @@ export default function Nav() {
         </a>
 
         <a
-          href="https://wa.me/420774420251?text=Ahoj+Jarko%2C+ráda+bych+si+s+tebou+popovídala."
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/kviz"
           onClick={close}
           className="mt-4 inline-block px-10 py-4 text-white text-xs tracking-[0.3em] uppercase font-bold"
-          style={{ background: "linear-gradient(to right, #9a7020, #e8c96e, #f5e07e, #d4af5a, #9a7020)" }}
+          style={{ background: "var(--gold)" }}
         >
-          Chci si popovídat
+          Udělat kvíz
         </a>
       </div>
     </>

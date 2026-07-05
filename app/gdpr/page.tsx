@@ -11,7 +11,7 @@ export default function GDPRPage() {
         <p className="text-xs tracking-[0.5em] uppercase text-[var(--muted)] font-medium mb-6">
           Právní informace
         </p>
-        <h1 className="font-sans font-black text-3xl md:text-4xl uppercase tracking-tight text-[var(--foreground)] mb-12">
+        <h1 className="font-sans font-black text-3xl md:text-4xl uppercase tracking-tight text-[var(--heading)] mb-12">
           Ochrana osobních údajů
         </h1>
 

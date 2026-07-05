@@ -25,7 +25,7 @@ export default function About() {
               O mně
             </p>
 
-            <h2 className="font-sans font-black text-4xl md:text-5xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-3">
+            <h2 className="font-sans font-black text-4xl md:text-5xl uppercase tracking-tight text-[var(--heading)] leading-tight mb-3">
               Nemluvím z knih.
             </h2>
             <p

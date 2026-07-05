@@ -23,7 +23,7 @@ export default function Testimonials() {
           <p className="text-xs tracking-[0.4em] uppercase text-[var(--gold)]">Reference</p>
         </div>
 
-        <h2 className="font-heading text-4xl md:text-5xl font-semibold text-[var(--foreground)] leading-tight mb-16">
+        <h2 className="font-heading text-4xl md:text-5xl font-semibold text-[var(--heading)] leading-tight mb-16">
           Co říkají
           <br />
           <span className="italic text-[var(--gold)]">klientky</span>

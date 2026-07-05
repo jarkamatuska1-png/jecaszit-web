@@ -18,7 +18,7 @@ export default function ForWho() {
           <p className="text-xs tracking-[0.5em] uppercase text-[var(--gold)] font-medium mb-6">
             Je to pro tebe?
           </p>
-          <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-[var(--foreground)] leading-tight mb-4">
+          <h2 className="font-sans font-black text-4xl md:text-5xl lg:text-6xl uppercase tracking-tight text-[var(--heading)] leading-tight mb-4">
             Poznáváš se
           </h2>
           <p
