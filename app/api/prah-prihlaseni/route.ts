@@ -8,8 +8,49 @@ const ECOMAIL_LIST_ID = process.env.ECOMAIL_LIST_ID_JECASZIT || "29";
 const POVOLENE_ZDROJE = ["domu", "dil"] as const;
 type Zdroj = (typeof POVOLENE_ZDROJE)[number];
 
+/**
+ * Jednoduchá brzda proti zahlcení — nejvýš 5 pokusů z jedné adresy za 10 minut.
+ * Drží se v paměti běžící instance, takže to není neprůstřelná hradba (instancí
+ * může běžet víc); je to levná první vrstva, která odfiltruje hrubé bušení do
+ * formuláře. Tvrdší limit patří na úroveň Vercel WAF.
+ */
+const OKNO_MS = 10 * 60 * 1000;
+const MAX_POKUSU = 5;
+const pokusy = new Map<string, { pocet: number; do: number }>();
+
+function prekrocilLimit(ip: string): boolean {
+  const ted = Date.now();
+  const zaznam = pokusy.get(ip);
+
+  if (!zaznam || ted > zaznam.do) {
+    pokusy.set(ip, { pocet: 1, do: ted + OKNO_MS });
+    // ať mapa neroste donekonečna — vyhazujeme prošlé záznamy
+    if (pokusy.size > 5000) {
+      for (const [klic, hodnota] of pokusy) {
+        if (ted > hodnota.do) pokusy.delete(klic);
+      }
+    }
+    return false;
+  }
+
+  zaznam.pocet += 1;
+  return zaznam.pocet > MAX_POKUSU;
+}
+
 export async function POST(request: Request) {
   try {
+    const ip =
+      request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+      request.headers.get("x-real-ip") ||
+      "neznama";
+
+    if (prekrocilLimit(ip)) {
+      return NextResponse.json(
+        { error: "Zkoušíš to moc často. Dej tomu chvilku a zkus to znovu." },
+        { status: 429, headers: { "Retry-After": "600" } }
+      );
+    }
+
     const { email, website, zdroj } = await request.json();
 
     // Honeypot — roboti vyplní skryté pole "website"; člověk ne.

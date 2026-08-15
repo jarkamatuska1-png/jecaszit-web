@@ -22,9 +22,31 @@ const dancing = Dancing_Script({
   weight: ["400", "600", "700"],
 });
 
+/**
+ * Obraz pro sdílení na sítích — schválený vizuál „dvě reality" (Jarka fotograficky,
+ * Helena malovaně). Na šířku, jak si Facebook a spol. přejí; portrét si ořezávaly.
+ */
+export const OG_OBRAZ = {
+  url: "/images/vitej-dve-reality.png",
+  width: 1376,
+  height: 768,
+  alt: "Jarka a Helena u jednoho stolu — Je čas žít",
+} as const;
+
+/**
+ * Ověřovací kódy webmasterských nástrojů. Berou se z env, takže se dají doplnit
+ * na Vercelu bez zásahu do kódu — a když nejsou, žádná prázdná značka se nevypíše.
+ *   SEZNAM_WMT_KOD      → Seznam.cz Webmaster (seznam-wmt)
+ *   BING_WMT_KOD        → Bing Webmaster Tools (msvalidate.01)
+ */
+const overeniOstatni: Record<string, string> = {};
+if (process.env.SEZNAM_WMT_KOD) overeniOstatni["seznam-wmt"] = process.env.SEZNAM_WMT_KOD;
+if (process.env.BING_WMT_KOD) overeniOstatni["msvalidate.01"] = process.env.BING_WMT_KOD;
+
 export const metadata: Metadata = {
   verification: {
     google: "xQQSjb52K1wI76cpN1aMpW-SX-UqijfUucG53V5udw4",
+    ...(Object.keys(overeniOstatni).length > 0 ? { other: overeniOstatni } : {}),
   },
   title: { default: "Je čas žít | Svět Heleny", template: "%s | Je čas žít" },
   description: "Jen pohled dvou žen. Jedné vymyšlené a druhé reálné. Příběh na pokračování pro velké holky, které chtějí od života víc.",
@@ -36,13 +58,13 @@ export const metadata: Metadata = {
     siteName: "Je čas žít",
     locale: "cs_CZ",
     type: "website",
-    images: [{ url: "/images/jarka-o-mne.jpg", width: 1200, height: 630, alt: "Jarka Matušková — Je čas žít" }],
+    images: [OG_OBRAZ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Je čas žít | Svět Heleny",
     description: "Jen pohled dvou žen. Jedné vymyšlené a druhé reálné.",
-    images: ["/images/jarka-o-mne.jpg"],
+    images: [OG_OBRAZ.url],
   },
 };
 
@@ -73,6 +95,27 @@ export default function RootLayout({
               jobTitle: "Autorka příběhu JE ČAS ŽÍT",
               description: "Autorka a průvodkyně světem Heleny — příběhu na pokračování pro velké holky.",
               knowsAbout: ["příběh na pokračování", "osobní rozvoj", "metoda JIH®"],
+            }),
+          }}
+        />
+        {/* Značka webu — aby vyhledávače spojily adresu s názvem „Je čas žít" */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Je čas žít",
+              alternateName: "Svět Heleny",
+              url: "https://www.jecaszit.cz",
+              inLanguage: "cs-CZ",
+              description:
+                "Příběh na pokračování pro velké holky, které chtějí od života víc. Jen pohled dvou žen — jedné vymyšlené a druhé reálné.",
+              publisher: {
+                "@type": "Person",
+                name: "Jarka Matušková",
+                url: "https://www.jecaszit.cz/o-autorce",
+              },
             }),
           }}
         />

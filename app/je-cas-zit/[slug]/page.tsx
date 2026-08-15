@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import PrahSignup from "@/components/PrahSignup";
 import { vsechnyDily, dilPodleSlugu, LINKA } from "@/lib/dily";
+import { OG_OBRAZ } from "@/app/layout";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -21,6 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const nazev = dil.titul;
   const url = `https://www.jecaszit.cz/je-cas-zit/${dil.slug}`;
+  // Ke sdílení jde banner dílu; když ho díl nemá, zaskočí obraz „dvě reality“.
+  const obraz = dil.banner
+    ? { url: dil.banner, alt: `Díl ${dil.poradi} — ${dil.titul}` }
+    : { url: OG_OBRAZ.url, alt: OG_OBRAZ.alt };
 
   return {
     title: nazev,
@@ -33,6 +38,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Je čas žít",
       locale: "cs_CZ",
       type: "article",
+      publishedTime: dil.datum || undefined,
+      authors: ["Jarka Matušková"],
+      images: [obraz],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${dil.titul} | Je čas žít`,
+      description: dil.anotace,
+      images: [obraz.url],
     },
   };
 }
@@ -45,8 +59,38 @@ export default async function DilPage({ params }: Props) {
   const dily = vsechnyDily();
   const dalsi = dily.find((d) => d.poradi > dil.poradi);
 
+  const url = `https://www.jecaszit.cz/je-cas-zit/${dil.slug}`;
+  // Aby vyhledávače četly díl jako část seriálu, ne jako běžnou stránku.
+  const schemaDilu = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: dil.titul,
+    description: dil.anotace,
+    inLanguage: "cs-CZ",
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    ...(dil.datum ? { datePublished: dil.datum, dateModified: dil.datum } : {}),
+    ...(dil.banner ? { image: [`https://www.jecaszit.cz${dil.banner}`] } : {}),
+    author: {
+      "@type": "Person",
+      name: "Jarka Matušková",
+      url: "https://www.jecaszit.cz/o-autorce",
+    },
+    publisher: { "@type": "Person", name: "Jarka Matušková" },
+    isPartOf: {
+      "@type": "CreativeWorkSeries",
+      name: "Je čas žít — život s Helenou",
+      url: "https://www.jecaszit.cz/je-cas-zit",
+    },
+    position: dil.poradi,
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaDilu) }}
+      />
       <Nav />
       <main className="pt-16">
         {/* Hlavička dílu — s bannerem 16:9 (název sedí v klidné ploše vlevo) */}
