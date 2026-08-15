@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Je čas žít — život s Helenou",
   description:
     "Příběh na pokračování. Každý díl celý, otevřený a zdarma — Helenin život a pod ním kousek mojí reality.",
-  alternates: { canonical: "https://jecaszit.cz/je-cas-zit" },
+  alternates: { canonical: "https://www.jecaszit.cz/je-cas-zit" },
 };
 
 export default function PrehledDilu() {

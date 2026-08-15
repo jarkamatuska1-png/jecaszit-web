@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       // ale nemají se objevovat ve vyhledávání
       disallow: ["/kviz", "/blog", "/o-mne", "/svet", "/dalsi-kapitola"],
     },
-    sitemap: "https://jecaszit.cz/sitemap.xml",
+    sitemap: "https://www.jecaszit.cz/sitemap.xml",
   };
 }
