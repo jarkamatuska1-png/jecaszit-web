@@ -1,6 +1,7 @@
 export const metadata = {
   title: "Ochrana osobních údajů | Jarka Matušková",
   description: "Informace o zpracování osobních údajů na webu jecaszit.cz",
+  alternates: { canonical: "https://www.jecaszit.cz/gdpr" },
 };
 
 export default function GDPRPage() {
