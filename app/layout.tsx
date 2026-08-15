@@ -34,13 +34,14 @@ export const OG_OBRAZ = {
 } as const;
 
 /**
- * Ověřovací kódy webmasterských nástrojů. Berou se z env, takže se dají doplnit
- * na Vercelu bez zásahu do kódu — a když nejsou, žádná prázdná značka se nevypíše.
- *   SEZNAM_WMT_KOD      → Seznam.cz Webmaster (seznam-wmt)
- *   BING_WMT_KOD        → Bing Webmaster Tools (msvalidate.01)
+ * Ověřovací kódy webmasterských nástrojů. Nejsou to tajemství — ve stránce stojí
+ * veřejně, proto sedí rovnou v kódu vedle Googlu. Env proměnná (`SEZNAM_WMT_KOD`,
+ * `BING_WMT_KOD`) kód přebije, kdyby bylo potřeba ho vyměnit bez zásahu do kódu.
  */
-const overeniOstatni: Record<string, string> = {};
-if (process.env.SEZNAM_WMT_KOD) overeniOstatni["seznam-wmt"] = process.env.SEZNAM_WMT_KOD;
+const overeniOstatni: Record<string, string> = {
+  // Seznam.cz Webmaster — reporter.seznam.cz/wm (ověřeno 15. 8. 2026)
+  "seznam-wmt": process.env.SEZNAM_WMT_KOD || "jasPDNwik0JeRba8RRAdpj6FZ5uAbJ6k",
+};
 if (process.env.BING_WMT_KOD) overeniOstatni["msvalidate.01"] = process.env.BING_WMT_KOD;
 
 export const metadata: Metadata = {

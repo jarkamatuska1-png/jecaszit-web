@@ -42,11 +42,17 @@ Nic z toho nepatří do gitu.
 |---|---|---|
 | `ECOMAIL_API_KEY` | odesílání kontaktů do Ecomailu | ano |
 | `ECOMAIL_LIST_ID_JECASZIT` | seznam JE ČAS ŽÍT (**29**) | ano (jinak fallback 29) |
-| `SEZNAM_WMT_KOD` | ověření webu v Seznam.cz Webmaster | ne |
+| `SEZNAM_WMT_KOD` | přebije ověřovací kód Seznamu z kódu | ne |
 | `BING_WMT_KOD` | ověření webu v Bing Webmaster Tools | ne |
 
-Ověřovací kódy jsou schválně v env: doplní se na Vercelu bez zásahu do kódu
-a dokud nejsou vyplněné, žádná prázdná značka se do stránky nevypíše.
+Ověřovací kódy vyhledávačů nejsou tajemství — ve stránce stojí veřejně, proto
+kódy Googlu a Seznamu sedí rovnou v `app/layout.tsx`. Env proměnná je tu pro
+případ, že by se kód měnil bez zásahu do kódu; dokud není vyplněná u Bingu,
+žádná prázdná značka se nevypíše.
+
+Webmasterské nástroje:
+[Seznam](https://reporter.seznam.cz/wm/) · [Bing](https://www.bing.com/webmasters) ·
+[Google](https://search.google.com/search-console)
 
 ## Adresy a vyhledávače
 
