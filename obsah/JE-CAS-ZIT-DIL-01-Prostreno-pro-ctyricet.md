@@ -5,6 +5,7 @@ slug: prostreno-pro-ctyricet
 datum: 2026-08-10
 banner: /images/dil-01-banner-16x9.png
 karta: /images/dil-01-karta-3x2.png
+og: /images/og-dil-01.jpg
 anotace: "Helena umí zařídit všechno. Dokonalý stůl, každý detail sladěný. Jen na jednu jedinou věc celý život zapomínala."
 ---
 

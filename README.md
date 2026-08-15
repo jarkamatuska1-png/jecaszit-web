@@ -29,9 +29,40 @@ do kódu se kvůli tomu nesahá. V hlavičce souboru:
 | `titul`, `poradi`, `slug`, `datum` | základ; `slug` je adresa dílu |
 | `anotace` | teaser na kartu a popisek při sdílení |
 | `banner`, `karta` | obrázky 16:9 a 3:2 |
+| `banner`, `karta`, `og` | obrázky — rozměry viz níže |
 | `skryto: true` | díl ještě nejde ven — 404, mimo přehled i sitemapu |
 
 Zveřejnit díl = smazat řádek `skryto: true`.
+
+## Rozměry obrázků u dílu — závazné
+
+Každý díl má tři obrázky a **každý má jiný účel i jiný poměr stran**. Když se
+rozměr netrefí, něco se ořízne: na webu motiv, na Facebooku hlavy.
+
+| pole | rozměr | poměr | k čemu |
+|---|---|---|---|
+| `banner` | **1600 × 900** | 16:9 | široký obraz nad dílem na webu |
+| `karta` | **1200 × 800** | 3:2 | karta dílu v přehledu |
+| `og` | **1200 × 630** | 1.91:1 | náhled při sdílení na sítích |
+
+Pravidla, která platí u všech tří:
+
+- **`banner`: motiv patří vpravo, vlevo se nechává klidná plocha** — přes ni se
+  na webu vysází název dílu. Když je vlevo rušno, název není čitelný.
+- **`og`: hlavy postav patří do svislého středu.** Náhled se ořezává na střed,
+  takže co je u horního nebo dolního okraje, může zmizet.
+- **`og` se vyrábí z banneru skriptem**, ne ručně:
+
+```bash
+./scripts/og-obrazek.sh public/images/dil-02-banner-16x9.png public/images/og-dil-02.jpg
+```
+
+  Skript ořízne na 1200×630 a uloží jako JPG (kolem 200 kB). Cestu pak zapíšeš
+  do hlavičky dílu jako `og: /images/og-dil-02.jpg`.
+- **Formát:** `banner` a `karta` mohou být PNG (ilustrace), `og` vždycky **JPG** —
+  Facebook ho stahuje při každém sdílení a PNG bývá pětkrát těžší.
+- Když `og` chybí, použije se `banner` a sítě si ho oříznou samy. Funguje to,
+  ale výsledek nemáš pod kontrolou.
 
 ## Proměnné prostředí
 

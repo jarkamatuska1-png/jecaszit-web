@@ -6,7 +6,8 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import PrahSignup from "@/components/PrahSignup";
-import { vsechnyDily, dilPodleSlugu, LINKA } from "@/lib/dily";
+import PoslatDal from "@/components/PoslatDal";
+import { vsechnyDily, dilPodleSlugu, LINKA, rozmeryObrazku } from "@/lib/dily";
 import { OG_OBRAZ } from "@/app/layout";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -23,9 +24,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const nazev = dil.titul;
   const url = `https://www.jecaszit.cz/je-cas-zit/${dil.slug}`;
   // Ke sdílení jde banner dílu; když ho díl nemá, zaskočí obraz „dvě reality“.
-  const obraz = dil.banner
-    ? { url: dil.banner, alt: `Díl ${dil.poradi} — ${dil.titul}` }
-    : { url: OG_OBRAZ.url, alt: OG_OBRAZ.alt };
+  // Do náhledu na sítích jde přednostně obrázek 1200×630 (poměr, který chce
+  // Facebook). Když ho díl nemá, zaskočí banner 16:9 a po něm obraz „dvě reality“.
+  const rozmeryBanneru = dil.banner ? rozmeryObrazku(dil.banner) : null;
+  const popisObrazu = `Díl ${dil.poradi} — ${dil.titul}`;
+  const obraz = dil.og
+    ? { url: dil.og, alt: popisObrazu, width: 1200, height: 630 }
+    : dil.banner
+      ? {
+          url: dil.banner,
+          alt: popisObrazu,
+          ...(rozmeryBanneru ? { width: rozmeryBanneru.sirka, height: rozmeryBanneru.vyska } : {}),
+        }
+      : { url: OG_OBRAZ.url, alt: OG_OBRAZ.alt, width: OG_OBRAZ.width, height: OG_OBRAZ.height };
 
   return {
     title: nazev,
@@ -184,6 +195,15 @@ export default async function DilPage({ params }: Props) {
                 Nech mi tady svůj e-mail, ať ti další Helenin díl neuteče.
               </p>
               <PrahSignup zdroj="dil" />
+            </div>
+          </FadeIn>
+        </section>
+
+        {/* Poslat dál — až za pozváním k e-mailu, ať se dvě prosby nepřekřikují */}
+        <section className="px-6 pb-20 md:pb-24">
+          <FadeIn>
+            <div className="max-w-2xl mx-auto">
+              <PoslatDal titul={dil.titul} url={url} />
             </div>
           </FadeIn>
         </section>
