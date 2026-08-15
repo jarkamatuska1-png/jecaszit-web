@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!dil) return {};
 
   const nazev = dil.titul;
-  const url = `https://jecaszit.cz/je-cas-zit/${dil.slug}`;
+  const url = `https://www.jecaszit.cz/je-cas-zit/${dil.slug}`;
 
   return {
     title: nazev,

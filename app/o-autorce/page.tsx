@@ -6,7 +6,7 @@ import FadeIn from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "O autorce",
   description: "Ahoj, jsem Jarka. Helenu jsem si vymyslela — ale to, co prožívá, vymyšlené není.",
-  alternates: { canonical: "https://jecaszit.cz/o-autorce" },
+  alternates: { canonical: "https://www.jecaszit.cz/o-autorce" },
 };
 
 export default function OAutorce() {

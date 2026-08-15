@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Vítej ve světě Heleny | Je čas žít",
   description:
     "Jen pohled dvou žen. Jedné vymyšlené a druhé reálné. Příběh na pokračování pro velké holky, které chtějí od života víc.",
-  alternates: { canonical: "https://jecaszit.cz" },
+  alternates: { canonical: "https://www.jecaszit.cz" },
 };
 
 export default function Domu() {
