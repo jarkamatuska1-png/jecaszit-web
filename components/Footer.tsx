@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-[var(--gold-light)] py-8">
+    <footer className="border-t border-[var(--linka)] py-8">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="font-sans font-black text-sm tracking-[0.2em] uppercase text-[var(--gold)]">
           Je čas žít

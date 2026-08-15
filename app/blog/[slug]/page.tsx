@@ -12,6 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} | Jarka Matušková`,
     description: post.excerpt,
+    // stará stránka mimo svět Heleny — živá, ale mimo vyhledávání
+    robots: { index: false, follow: false },
   };
 }
 

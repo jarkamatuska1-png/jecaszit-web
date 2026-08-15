@@ -1,12 +1,13 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
+// Hlavička má tři položky. Nic víc.
+// „Cesta s Barnym" nemá vlastní záložku — je vevnitř každého dílu.
 const links = [
-  { href: "#pro-koho", label: "Pro koho" },
-  { href: "#spoluprace", label: "Spolupráce" },
-  { href: "/o-mne", label: "O mně" },
-  { href: "/blog", label: "Blog" },
-  { href: "#kontakt", label: "Kontakt" },
+  { href: "/", label: "Kdo je Helena" },
+  { href: "/je-cas-zit", label: "Život s Helenou" },
+  { href: "/o-autorce", label: "O autorce" },
 ];
 
 export default function Nav() {
@@ -23,13 +24,13 @@ export default function Nav() {
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-sm" : "bg-white/95"}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[var(--pozadi)] shadow-sm" : "bg-[var(--pozadi)]/95"}`}>
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
           {/* Logo */}
-          <a
-            href="#"
-            className="font-sans text-sm font-black tracking-[0.3em] uppercase"
+          <Link
+            href="/"
+            className="font-sans text-sm font-black tracking-[0.3em] uppercase shrink-0"
             style={{
               background: "var(--gold)",
               WebkitBackgroundClip: "text",
@@ -38,32 +39,19 @@ export default function Nav() {
             }}
           >
             Je čas žít
-          </a>
+          </Link>
 
           {/* Desktop linky */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {links.map((l) => (
-              <a
+              <Link
                 key={l.href}
                 href={l.href}
-                className="text-xs tracking-[0.2em] uppercase font-medium text-[var(--foreground)] hover:text-[var(--gold)] transition-colors"
+                className="text-xs tracking-[0.14em] lg:tracking-[0.2em] uppercase font-medium text-[var(--foreground)] hover:text-[var(--gold)] transition-colors whitespace-nowrap"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="https://www.instagram.com/j_matuskova/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="text-[var(--muted)] hover:text-[var(--gold)] transition-colors"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                <circle cx="12" cy="12" r="4"/>
-                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
-              </svg>
-            </a>
           </div>
 
           {/* Hamburger — jen mobil */}
@@ -74,24 +62,15 @@ export default function Nav() {
           >
             <span
               className="block h-[2px] w-full transition-all duration-300 origin-center"
-              style={{
-                background: "var(--gold)",
-                transform: open ? "translateY(7px) rotate(45deg)" : "none",
-              }}
+              style={{ background: "var(--gold)", transform: open ? "translateY(7px) rotate(45deg)" : "none" }}
             />
             <span
               className="block h-[2px] w-full transition-all duration-300"
-              style={{
-                background: "var(--gold)",
-                opacity: open ? 0 : 1,
-              }}
+              style={{ background: "var(--gold)", opacity: open ? 0 : 1 }}
             />
             <span
               className="block h-[2px] w-full transition-all duration-300 origin-center"
-              style={{
-                background: "var(--gold)",
-                transform: open ? "translateY(-7px) rotate(-45deg)" : "none",
-              }}
+              style={{ background: "var(--gold)", transform: open ? "translateY(-7px) rotate(-45deg)" : "none" }}
             />
           </button>
 
@@ -100,42 +79,18 @@ export default function Nav() {
 
       {/* Mobilní menu overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-white flex flex-col items-center justify-center gap-10 transition-all duration-300 md:hidden ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 z-40 bg-[var(--pozadi)] flex flex-col items-center justify-center gap-10 px-8 text-center transition-all duration-300 md:hidden ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
       >
         {links.map((l) => (
-          <a
+          <Link
             key={l.href}
             href={l.href}
             onClick={close}
-            className="text-2xl tracking-[0.3em] uppercase font-black text-[var(--foreground)] hover:text-[var(--gold)] transition-colors"
+            className="text-xl tracking-[0.2em] uppercase font-black text-[var(--foreground)] hover:text-[var(--gold)] transition-colors leading-relaxed"
           >
             {l.label}
-          </a>
+          </Link>
         ))}
-
-        <a
-          href="https://www.instagram.com/j_matuskova/"
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={close}
-          className="text-sm tracking-[0.3em] uppercase font-medium text-[var(--muted)] hover:text-[var(--gold)] transition-colors flex items-center gap-2"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
-          </svg>
-          Instagram
-        </a>
-
-        <a
-          href="/kviz"
-          onClick={close}
-          className="mt-4 inline-block px-10 py-4 text-white text-xs tracking-[0.3em] uppercase font-bold"
-          style={{ background: "var(--gold)" }}
-        >
-          Udělat kvíz
-        </a>
       </div>
     </>
   );
