@@ -4,7 +4,7 @@ import path from "node:path";
 /**
  * Díly čteme z markdownu ve složce `obsah/`.
  * Přidat další díl = přidat další .md soubor s hlavičkou (frontmatter):
- *   titul, poradi, slug, datum, anotace, banner, karta
+ *   titul, poradi, slug, datum, anotace, banner, karta, og
  * `skryto: true` = díl je hotový, ale ještě nejde ven (není v přehledu, na vlastní
  * adrese vrací 404 a není v sitemapě). Zveřejní se smazáním toho jednoho řádku.
  * `anotace` = krátký teaser na kartu dílu; s textem dílu nemá nic společného.
@@ -22,6 +22,12 @@ export type Dil = {
   banner: string;
   /** obrázek 3:2 na kartu v přehledu (plný motiv); prázdné = karta bez obrázku */
   karta: string;
+  /**
+   * Obrázek 1200×630 pro náhled na sítích (Facebook chce poměr 1.91:1).
+   * Prázdné = použije se banner, který má 16:9 a sítě si ho oříznou po svém.
+   * Vyrobí se z banneru skriptem `scripts/og-obrazek.sh`.
+   */
+  og: string;
   /** true = díl ještě nejde ven (nikde se nezobrazí ani nedohledá) */
   skryto: boolean;
   /** Helenina scéna — odstavce */
@@ -31,6 +37,24 @@ export type Dil = {
 };
 
 const SLOZKA_OBSAHU = path.join(process.cwd(), "obsah");
+
+/**
+ * Rozměry PNG obrázku z jeho hlavičky (chunk IHDR).
+ * Slouží k `og:image:width/height` — s uvedenými rozměry ukážou sítě náhled
+ * hned při prvním sdílení, místo aby si obrázek musely nejdřív stáhnout a změřit.
+ * Když se rozměry zjistit nedaří, vrací null a značky se prostě nevypíšou.
+ */
+export function rozmeryObrazku(verejnaCesta: string): { sirka: number; vyska: number } | null {
+  if (!verejnaCesta.toLowerCase().endsWith(".png")) return null;
+  try {
+    const soubor = path.join(process.cwd(), "public", verejnaCesta.replace(/^\//, ""));
+    const hlavicka = fs.readFileSync(soubor).subarray(0, 24);
+    if (hlavicka.length < 24 || hlavicka.toString("ascii", 12, 16) !== "IHDR") return null;
+    return { sirka: hlavicka.readUInt32BE(16), vyska: hlavicka.readUInt32BE(20) };
+  } catch {
+    return null;
+  }
+}
 const ZNACKA_DOHRY = "### Cesta s Barnym";
 
 type Hlavicka = Record<string, string>;
@@ -100,6 +124,7 @@ function precti(nazevSouboru: string): Dil {
     anotace: hlavicka.anotace || "",
     banner: hlavicka.banner || "",
     karta: hlavicka.karta || "",
+    og: hlavicka.og || "",
     skryto: (hlavicka.skryto || "").toLowerCase() === "true",
     scena: naOdstavce(scenaText),
     dohra: naOdstavce(dohraText),

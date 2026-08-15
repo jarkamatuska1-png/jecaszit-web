@@ -27,9 +27,9 @@ const dancing = Dancing_Script({
  * Helena malovaně). Na šířku, jak si Facebook a spol. přejí; portrét si ořezávaly.
  */
 export const OG_OBRAZ = {
-  url: "/images/vitej-dve-reality.png",
-  width: 1376,
-  height: 768,
+  url: "/images/og-vitej-dve-reality.jpg",
+  width: 1200,
+  height: 630,
   alt: "Jarka a Helena u jednoho stolu — Je čas žít",
 } as const;
 

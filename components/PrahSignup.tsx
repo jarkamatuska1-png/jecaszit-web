@@ -96,6 +96,16 @@ export default function PrahSignup({
       )}
 
       <p className="text-xs text-[var(--muted)] mt-4 text-center">{poznamka}</p>
+
+      {/* Informace o zpracování údajů musí stát u formuláře, ne až v patičce —
+          čtenářka má vědět, komu adresu dává, ve chvíli, kdy ji dává. */}
+      <p className="text-xs text-[var(--muted)] mt-2 text-center">
+        Odesláním souhlasíš se{" "}
+        <a href="/gdpr" className="underline hover:text-[var(--gold)] transition-colors">
+          zpracováním e-mailu
+        </a>{" "}
+        pro zasílání příběhu.
+      </p>
     </form>
   );
 }

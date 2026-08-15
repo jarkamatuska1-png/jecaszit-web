@@ -6,7 +6,9 @@
   --text: #241F1C;      /* nadpisy i text — skoro černá */
   --salvej: #7C8A6F;    /* akcenty (DÍL 1, Číst celý díl →) — NIKDY celý text */
   --salvej-tmava: #5C6A50;  /* rukopisné nadpisy a podpis — ať vyniknou */
-  --terakota: #B06B4C;  /* hlavní tlačítko (e-mail) */
+  --terakota: #A66246;  /* hlavní tlačítko (e-mail) — o odstín tmavší než původní
+                           #B06B4C, aby bílý nápis na něm splnil normu čitelnosti
+                           (WCAG AA 4.5:1); vizuálně je to tentýž terakotový tón */
   --karta: #FFFDF8;     /* plocha karty — o odstín světlejší než pozadí, ne bílá */
   --linka: #E4DCCB;     /* vlasové linky a rámečky */
   --muted: #6E655C;     /* tišší text (dohra Cesta s Barnym) */
@@ -14,8 +16,12 @@
   /* Staré názvy ukazují na novou paletu, ať nikde nic nezůstane viset. */
   --foreground: var(--text);
   --heading: var(--text);
-  --gold: var(--salvej);
-  --gold-dark: var(--salvej);
+  /* Drobný text a odkazy ukazují na TMAVŠÍ šalvěj — světlá #7C8A6F má na krému
+     kontrast jen 3.38:1, což je pod normou pro čtený text (a čtenářky světa
+     Heleny jsou v letech, kdy oči odpouštějí míň). Tmavší #5C6A50 dá 5.32:1.
+     Světlá šalvěj zůstává na velké prvky a dekorace přes `var(--salvej)`. */
+  --gold: var(--salvej-tmava);
+  --gold-dark: var(--salvej-tmava);
   --gold-light: var(--linka);
   --gold-gradient-h: linear-gradient(to right, #64705A 0%, #7C8A6F 50%, #64705A 100%);
 }
