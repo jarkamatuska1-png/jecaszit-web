@@ -1,6 +1,8 @@
 import { posts, formatDate } from "@/lib/blog";
 
 export const metadata = {
+  // stará stránka mimo svět Heleny — živá, ale mimo vyhledávání
+  robots: { index: false, follow: false },
   title: "Blog | Jarka Matušková",
   description: "Články o odvaze začít znovu, síle ženy a tom, co je opravdu možné.",
 };

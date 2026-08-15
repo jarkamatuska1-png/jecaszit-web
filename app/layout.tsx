@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   verification: {
     google: "xQQSjb52K1wI76cpN1aMpW-SX-UqijfUucG53V5udw4",
   },
-  title: "Je čas žít | Jarka Matušková",
-  description: "Pro velké holky, které chtějí od života víc. Jeden společný hovor může ukázat tvoje další možnosti.",
+  title: { default: "Je čas žít | Svět Heleny", template: "%s | Je čas žít" },
+  description: "Jen pohled dvou žen. Jedné vymyšlené a druhé reálné. Příběh na pokračování pro velké holky, které chtějí od života víc.",
   metadataBase: new URL("https://jecaszit.cz"),
   openGraph: {
-    title: "Je čas žít | Jarka Matušková",
-    description: "Pro velké holky, které chtějí od života víc. Jeden společný hovor může ukázat tvoje další možnosti.",
+    title: "Je čas žít | Svět Heleny",
+    description: "Jen pohled dvou žen. Jedné vymyšlené a druhé reálné.",
     url: "https://jecaszit.cz",
     siteName: "Je čas žít",
     locale: "cs_CZ",
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Je čas žít | Jarka Matušková",
-    description: "Pro velké holky, které chtějí od života víc.",
+    title: "Je čas žít | Svět Heleny",
+    description: "Jen pohled dvou žen. Jedné vymyšlené a druhé reálné.",
     images: ["/images/jarka-o-mne.jpg"],
   },
 };
@@ -70,15 +70,9 @@ export default function RootLayout({
                 "https://www.instagram.com/j_matuskova/",
                 "https://www.facebook.com/jarka.matuskova",
               ],
-              jobTitle: "Koučka a autorka metody JIH®",
-              description: "Pomáhám ženám, které chtějí od života víc. Jeden společný hovor může ukázat tvoje další možnosti.",
-              knowsAbout: ["osobní rozvoj", "metoda JIH®", "koučink žen", "změna života"],
-              offers: {
-                "@type": "Offer",
-                name: "Úvodní hovor",
-                description: "Jeden společný hovor, kde se podíváme na tvoje další možnosti.",
-                url: "https://jecaszit.cz/#spoluprace",
-              },
+              jobTitle: "Autorka příběhu JE ČAS ŽÍT",
+              description: "Autorka a průvodkyně světem Heleny — příběhu na pokračování pro velké holky.",
+              knowsAbout: ["příběh na pokračování", "osobní rozvoj", "metoda JIH®"],
             }),
           }}
         />

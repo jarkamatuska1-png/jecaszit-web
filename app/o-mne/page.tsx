@@ -2,6 +2,8 @@ import Image from "next/image";
 import BrushStroke from "@/components/BrushStroke";
 
 export const metadata = {
+  // stará stránka mimo svět Heleny — živá, ale mimo vyhledávání
+  robots: { index: false, follow: false },
   title: "O mně | Jarka Matušková",
   description: "Vím, jaké to je začínat znovu. Ne jednou — několikrát. Příběh Jarky Matuškovéé.",
 };
