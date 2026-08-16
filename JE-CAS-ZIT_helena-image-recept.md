@@ -131,7 +131,9 @@ v hlavičce dílu — stránka pak název nepíše podruhé).
   nikdy ne „dopočítat podle délky". Dlouhý název se zalomí do víc řádků, velikost zůstane.
 - **Nadřádek „DÍL x":** 0,013 × výška, prostrkaný, barva šalvěj `#7C8A6F`
 - **Barva názvu:** `#241F1C` · **řádkování** 1,18 · **odsazení zleva** 5,5 % šířky
-- **Sazební plocha:** levých 40 % šířky (klidná plocha banneru)
+- **Sazební plocha se MĚŘÍ z obrázku** — skript najde, kde v levé polovině začíná motiv
+  (skok v pestrosti sloupců), a text zalomí tak, aby do motivu nikdy nezasáhl. Dlouhý název
+  se proto rozloží na víc řádků, velikost písma zůstává stejná.
 - Čistá verze bez textu se ukládá jako `*-banner-cisty.png` — kdyby se přesazovalo.
 
 ### Které obrázky web potřebuje
