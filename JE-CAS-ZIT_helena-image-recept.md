@@ -31,7 +31,46 @@ interior designer. Outfit chosen PER SCENE, changes every episode (see WARDROBE)
 describe a new outfit in each prompt.)
 ```
 
-### NEGATIVE (vždy, kde to jde)
+
+### VEDLEJŠÍ POSTAVY — Martin (Helenin muž)
+
+Když je v obraze Martin, **místo MASTER Helena** přidej tenhle blok — a **jiný NEGATIVE**
+(Martin JE štíhlý, „thin/slim" se u něj nesmí negovat!).
+
+```
+Martin — a calm, kind CZECH man of 55, CENTRAL EUROPEAN with fair light skin and
+Slavic features, Helena's husband, a carpenter. BODY: tall (about 190 cm), lean
+slim build. HAIR: short black hair; only LIGHT DARK STUBBLE on his face — a few
+days of growth, a mere shadow of a beard and moustache; NOT a full beard, NOT a
+thick moustache. FACE: weathered gentle face, quiet steady eyes, unassuming.
+STYLE: simple work clothes — a work shirt with rolled sleeves, sturdy trousers;
+a craftsman's hands. Understated, grounded.
+(Face and body are LOCKED by Martin's two reference images.)
+```
+
+**Reference Martina — přikládej obě:**
+```
+jih-core/assets/martin/martin-ref-tvar.png      — tvář
+jih-core/assets/martin/martin-ref-postava.png   — celá postava (vysoký, štíhlý)
+```
+
+**NEGATIVE — Martin (jiný než u Heleny):**
+```
+young, 20s, 30s, clean-shaven, bald, overweight, muscular bodybuilder, heavy
+retouch, plastic skin, distorted hands, extra fingers, text, watermark, logo,
+asian features, east asian, japanese, chinese, korean, dark skin
+```
+
+⚠️ **Dvě věci naučené při jeho vzniku (16. 8. 2026):**
+1. „black moustache and a short beard" vyrobí hustý knír — Jarka chtěla **jen náznak**,
+   proto se píše `LIGHT DARK STUBBLE … a mere shadow of a beard and moustache`.
+2. Kombinace černých vlasů a strniště vyrobila **asijského muže**. Proto se do zadání
+   i do NEGATIVE výslovně píše, že je **Čech / Central European** — jinak to model neuhodne.
+
+---
+
+### NEGATIVE — Helena a scény bez postav
+
 ```
 thin, skinny, underweight, very slim, young, 20s, glamour model, heavy makeup,
 plastic skin, distorted hands, extra fingers, text, watermark, logo
@@ -99,9 +138,12 @@ Příklady, jak to vypadá hotové:
 - „Díl 1, karta" → STYLE + MASTER + `Helena arranging canapés and a glass of wine on a side table in her warm living room; cream silk blouse, terracotta midi skirt; tighter framing filling the frame, no empty text space; landscape 3:2` + NEGATIVE
 - „Díl 2, kuchyň" → STYLE + `a calm modern kitchen in soft morning light, a single glass catching the sun on a shelf, a tea towel over the counter, tender unspoken tension, no people` + NEGATIVE
 - „Cesta s Barnym" → STYLE + `a woman seen from behind walking her dog on a quiet morning path, gentle low light, intimate` + NEGATIVE
+- „Díl 3, banner (Martin)" → STYLE + MASTER Martin + `in a warm carpentry workshop, running his hand along a piece of wood on the bench, tools and shavings, soft late-afternoon light; composed to the RIGHT, calm space on the LEFT for a title; landscape 16:9` + NEGATIVE Martin
+- „Díl 3, karta (Martin)" → STYLE + MASTER Martin + `kneeling on a bathroom floor, fixing the pipe under the sink with a wrench, open toolbox beside him, warm light, quiet focused tenderness; tighter framing, no empty text space; landscape 3:2` + NEGATIVE Martin
 
-> Tip na konzistenci: u portrétů i scén s Helenou přikládej stále **stejné dvě reference**
-> (tvář + celá postava) — ať je to pořád táž žena i táž figura, jen v jiném oblečení.
+> Tip na konzistenci: u postav s referencí (**Helena, Martin**) přikládej stále **stejné dvě
+> reference** (tvář + celá postava) — ať jsou pořád titíž lidé i táž figura, jen v jiném
+> oblečení a póze.
 
 ---
 
