@@ -4,6 +4,7 @@ import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
+import PrahSignup from "@/components/PrahSignup";
 import { vsechnyDily, chystaneDily } from "@/lib/dily";
 
 export const metadata: Metadata = {
@@ -96,8 +97,8 @@ export default function PrehledDilu() {
                     {dil.titul}
                   </p>
                   <p className="text-base font-light leading-relaxed text-[var(--text)] max-w-md mx-auto">
-                    Brzy tady bude celý. Jestli chceš, aby ti neutekl, nech mi na sebe e-mail
-                    na úvodní stránce — pošlu ti ho, jakmile vyjde.
+                    Brzy tady bude celý. Jestli chceš, aby ti neutekl, nech mi na sebe e-mail —
+                    pošlu ti ho, jakmile vyjde.
                   </p>
                 </div>
               </FadeIn>
@@ -107,6 +108,17 @@ export default function PrehledDilu() {
               <p className="text-center text-[var(--muted)]">Zatím tu není žádný díl.</p>
             )}
           </div>
+        </section>
+        {/* Sběr e-mailu — ať žena nemusí zpátky na úvodní stránku */}
+        <section className="px-6 pb-24 md:pb-32">
+          <FadeIn>
+            <div className="max-w-2xl mx-auto text-center border-t border-[var(--linka)] pt-16">
+              <p className="text-lg font-light leading-relaxed text-[var(--text)] mb-9 max-w-xl mx-auto">
+                Nech mi tady svůj e-mail a každý další Helenin díl ti přijde, jakmile vyjde.
+              </p>
+              <PrahSignup zdroj="prehled" />
+            </div>
+          </FadeIn>
         </section>
       </main>
       <Footer />

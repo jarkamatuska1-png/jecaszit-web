@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 // Fallback 29 = seznam potvrzený Jarkou 15. 8. 2026 (freli.ecomailapp.cz/contacts/29).
 const ECOMAIL_LIST_ID = process.env.ECOMAIL_LIST_ID_JECASZIT || "29";
 
-const POVOLENE_ZDROJE = ["domu", "dil"] as const;
+const POVOLENE_ZDROJE = ["domu", "dil", "prehled"] as const;
 type Zdroj = (typeof POVOLENE_ZDROJE)[number];
 
 /**
