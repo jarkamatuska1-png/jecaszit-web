@@ -3,6 +3,9 @@ titul: "Nejtěžší host"
 poradi: 2
 slug: nejtezsi-host
 datum: 2026-08-15
+banner: /images/dil-02-banner-16x9.png
+karta: /images/dil-02-karta-3x2.png
+nazev_v_banneru: true
 skryto: true
 anotace: "Ráno po oslavě myje Martin v sedm hodin potichu sklenice. Jednu postaví do skříňky křivě — a Helena ji poprvé v životě nejde srovnat."
 ---

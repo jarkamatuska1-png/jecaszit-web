@@ -4,7 +4,7 @@ import path from "node:path";
 /**
  * Díly čteme z markdownu ve složce `obsah/`.
  * Přidat další díl = přidat další .md soubor s hlavičkou (frontmatter):
- *   titul, poradi, slug, datum, anotace, banner, karta, og
+ *   titul, poradi, slug, datum, anotace, banner, karta, nazev_v_banneru, og
  * `skryto: true` = díl je hotový, ale ještě nejde ven (není v přehledu, na vlastní
  * adrese vrací 404 a není v sitemapě). Zveřejní se smazáním toho jednoho řádku.
  * `anotace` = krátký teaser na kartu dílu; s textem dílu nemá nic společného.
@@ -30,6 +30,8 @@ export type Dil = {
   og: string;
   /** true = díl ještě nejde ven (nikde se nezobrazí ani nedohledá) */
   skryto: boolean;
+  /** true = název dílu je vypálený přímo v banneru, stránka ho už nepíše */
+  nazevVBanneru: boolean;
   /** Helenina scéna — odstavce */
   scena: string[];
   /** Autorská dohra Jarky (Cesta s Barnym) — odstavce; může být prázdná */
@@ -126,6 +128,7 @@ function precti(nazevSouboru: string): Dil {
     karta: hlavicka.karta || "",
     og: hlavicka.og || "",
     skryto: (hlavicka.skryto || "").toLowerCase() === "true",
+    nazevVBanneru: (hlavicka.nazev_v_banneru || "").toLowerCase() === "true",
     scena: naOdstavce(scenaText),
     dohra: naOdstavce(dohraText),
   };

@@ -117,8 +117,9 @@ export default async function DilPage({ params }: Props) {
                   className="object-cover"
                   priority
                 />
-                {/* Titulek v obraze až od md — na mobilu by se do klidné plochy nevešel */}
-                <div className="hidden md:flex absolute inset-y-0 left-0 w-[46%] flex-col justify-center pl-8 lg:pl-12 pr-4">
+                {/* Titulek v obraze až od md — na mobilu by se do klidné plochy nevešel.
+                    Když je název vypálený přímo v banneru, tenhle blok se nekreslí. */}
+                <div className={`${dil.nazevVBanneru ? "hidden" : "hidden md:flex"} absolute inset-y-0 left-0 w-[46%] flex-col justify-center pl-8 lg:pl-12 pr-4`}>
                   <p className="text-xs tracking-[0.35em] uppercase font-medium mb-4" style={{ color: "var(--gold-dark)" }}>
                     Díl {dil.poradi}
                   </p>
@@ -128,8 +129,8 @@ export default async function DilPage({ params }: Props) {
                 </div>
               </div>
 
-              {/* Mobil — název pod obrazem */}
-              <div className="md:hidden text-center mt-8">
+              {/* Mobil — název pod obrazem (u vypáleného názvu je v obraze) */}
+              <div className={`${dil.nazevVBanneru ? "hidden" : "md:hidden"} text-center mt-8`}>
                 <p className="text-xs tracking-[0.35em] uppercase font-medium mb-4" style={{ color: "var(--gold)" }}>
                   Díl {dil.poradi}
                 </p>
@@ -137,6 +138,11 @@ export default async function DilPage({ params }: Props) {
                   {dil.titul}
                 </h1>
               </div>
+              {dil.nazevVBanneru && (
+                <h1 className="sr-only">
+                  Díl {dil.poradi} — {dil.titul}
+                </h1>
+              )}
             </div>
           </section>
         ) : (

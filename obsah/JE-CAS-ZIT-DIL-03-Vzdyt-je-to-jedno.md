@@ -5,6 +5,7 @@ slug: vzdyt-je-to-jedno
 datum: 2026-08-16
 banner: /images/dil-03-banner-16x9.png
 karta: /images/dil-03-karta-3x2.png
+nazev_v_banneru: true
 skryto: true
 anotace: "Martin umí spravit celou ulici. Doma odložil nářadí už dávno — protože po něm stejně všechno někdo předělá. Až do dneška, kdy uslyšel jediné slovo."
 ---
