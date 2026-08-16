@@ -3,7 +3,7 @@ import { useState } from "react";
 
 type Props = {
   /** odkud přišel zápis — jen pro rozlišení v Ecomailu */
-  zdroj?: "domu" | "dil";
+  zdroj?: "domu" | "dil" | "prehled";
   tlacitko?: string;
   poznamka?: string;
 };
