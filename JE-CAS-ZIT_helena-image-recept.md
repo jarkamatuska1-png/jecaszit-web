@@ -121,6 +121,19 @@ terakota, tmavě modrá, šalvěj, s decentními akcenty. **Střídej mezi díly
 - **Karta (náhled v seznamu) — BEZ TEXTU:** těsnější, **3:2**, ~1200×800. **Plná kompozice, žádné místo na text a žádný text v obraze** — číslo, název i teaser jsou v kartě POD obrázkem.
 - Postup: vygeneruj **širokou verzi** (s klidnou plochou na název) a z ní **ořízni kartu** na plný motiv — nebo požádej generátor rovnou o oba poměry.
 
+### SAZBA NÁZVU DO BANNERU (pevná, stejná pro všechny díly)
+
+Název i číslo dílu se **vypalují přímo do banneru** (proto `nazev_v_banneru: true`
+v hlavičce dílu — stránka pak název nepíše podruhé).
+
+- **Písmo:** Arial Black, verzálky
+- **Velikost názvu:** **30 px** při výšce obrazu 768 px (poměr 0,039 × výška) — **pevně**,
+  nikdy ne „dopočítat podle délky". Dlouhý název se zalomí do víc řádků, velikost zůstane.
+- **Nadřádek „DÍL x":** 0,013 × výška, prostrkaný, barva šalvěj `#7C8A6F`
+- **Barva názvu:** `#241F1C` · **řádkování** 1,18 · **odsazení zleva** 5,5 % šířky
+- **Sazební plocha:** levých 40 % šířky (klidná plocha banneru)
+- Čistá verze bez textu se ukládá jako `*-banner-cisty.png` — kdyby se přesazovalo.
+
 ### Které obrázky web potřebuje
 - **Kdo je Helena (úvod):** vlastní obraz — dvojobraz (tvoje foto + Helena malovaná) **nebo** Helenin portrét v obýváku. Široký, s klidnou plochou vlevo na manifest (varianta A).
 - **Každý díl:** vlastní scéna ve dvou formátech (banner 16:9 s textem + karta 3:2 bez textu). Helena u stolku s chlebíčky = **ilustrace k Dílu 1 „Prostřeno pro čtyřicet"**, ne úvod webu.
